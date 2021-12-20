@@ -16,7 +16,6 @@ pipeline {
             steps {
                 // Run docker
                 sh "docker build -t apache2:1.0 ."
-                sh "docker run -d -p 80:80 d9a3c24fa8c8"
                 
             }
         }
