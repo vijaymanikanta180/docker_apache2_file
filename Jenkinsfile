@@ -6,8 +6,8 @@ pipeline {
     stages {
         stage('pull git code') {
              steps { 
-                  echo ‘pulling code from git repository’
-                  git ‘https://github.com/vijaymanikanta180/docker_apache2_file.git' 
+                 echo ‘pulling code from git repository’
+                 git ‘https://github.com/vijaymanikanta180/docker_apache2_file.git' 
             } 
         }
        
