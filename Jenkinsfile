@@ -6,7 +6,9 @@ pipeline {
     stages {
         stage('pull git code') {
             steps { 
-                git "https://github.com/vijaymanikanta180/docker_apache2_file.git" 
+                git branch: 'main',
+                credentialsId: 'vijaymanikanta180',
+                url: 'https://github.com/vijaymanikanta180/docker_apache2_file.git' 
             } 
         }
        
