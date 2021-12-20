@@ -6,8 +6,7 @@ pipeline {
     stages {
         stage('pull git code') {
             steps { 
-                echo ‘pulling code from git repository’
-                git ‘https://github.com/vijaymanikanta180/docker_apache2_file.git' 
+                git "https://github.com/vijaymanikanta180/docker_apache2_file.git" 
             } 
         }
        
@@ -15,9 +14,7 @@ pipeline {
             steps {
                 // Run docker
                 sh "docker build -t Apache2:1.0"
-
             }
-
         }
     }
 }
