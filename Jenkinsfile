@@ -1,8 +1,5 @@
 pipeline {
-    agent {
-       label ('docker')
-    }
-
+    agent any
     stages {
         stage('pull git code') {
             steps { 
