@@ -13,7 +13,7 @@ pipeline {
             steps {
                 // Run docker
                 sh "docker build -t apache2:2.0 ."
-                sh "docker run -itd -p 80:80 apache2:2.0"                
+                sh "docker run -itd -p 90:80 apache2:2.0"                
             }
         }
     }
