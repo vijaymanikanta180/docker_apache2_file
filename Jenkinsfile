@@ -1,3 +1,5 @@
+properties([parameters([choice(choices: ['1.0', '2.0'], name: 'new_version')])])
+
 pipeline {
     agent any
     stages {
