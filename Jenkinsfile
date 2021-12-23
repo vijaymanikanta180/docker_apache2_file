@@ -1,5 +1,3 @@
-properties([parameters([choice(choices: ['1.0', '2.0'], name: 'new_version')])])
-
 pipeline {
     agent any
     stages {
@@ -14,8 +12,8 @@ pipeline {
         stage('Build docker') {
             steps {
                 // Run docker
-                sh "docker build -t apache2:$ ."
-                sh "docker run -itd -p 90:80 apache2:$"                
+                sh "docker build -t apache2:${params.new_version} ."
+                sh "docker run -itd -p 90:80 apache2:${params.new_version}"                
             }
         }
     }
