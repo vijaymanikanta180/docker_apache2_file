@@ -12,8 +12,8 @@ pipeline {
         stage('Build docker') {
             steps {
                 // Run docker
-                sh "docker build -t apache2:2.0 ."
-                sh "docker run -itd -p 90:80 apache2:2.0"                
+                sh "docker build -t apache2:$(new_version) ."
+                sh "docker run -itd -p 90:80 apache2:$(new_version)"                
             }
         }
     }
