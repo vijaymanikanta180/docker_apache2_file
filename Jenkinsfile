@@ -5,6 +5,7 @@ pipeline {
             steps { 
                 git branch: "${tag}",
                 credentialsId: 'vijaymanikanta180',
+                refspec: '+refs/tags/*:refs/remotes/origin/tags/*',
                 url: 'https://github.com/vijaymanikanta180/docker_apache2_file.git' 
             } 
         }
