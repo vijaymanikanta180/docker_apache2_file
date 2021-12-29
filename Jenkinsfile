@@ -3,9 +3,8 @@ pipeline {
     stages {
         stage('pull git code') {
             steps { 
-                git branch: "${tag}",
+                git branch: 'main',
                 credentialsId: 'vijaymanikanta180',
-                refspec: '+refs/tags/*:refs/remotes/origin/tags/*',
                 url: 'https://github.com/vijaymanikanta180/docker_apache2_file.git' 
             } 
         }
@@ -13,8 +12,8 @@ pipeline {
         stage('Build docker') {
             steps {
                 // Run docker
-                sh "docker build -t apache2:${params.new_version} ."
-                sh "docker run -itd -p 80:80 apache2:${params.new_version}"                
+                sh "docker build -t apache2:2.0 ."
+                sh "docker run -itd -p 80:80 apache2:2.0"                
             }
         }
     }
