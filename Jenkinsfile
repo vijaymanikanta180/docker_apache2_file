@@ -1,4 +1,3 @@
-properties([parameters([gitParameter(branch: '', branchFilter: '.*', defaultValue: '1.0', name: 'tag', quickFilterEnabled: false, selectedValue: 'NONE', sortMode: 'NONE', tagFilter: '*', type: 'PT_TAG')])])
 pipeline {
     agent any
     stages {
