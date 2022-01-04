@@ -1,10 +1,8 @@
 pipeline {
     agent any
     parameters {
-        gitParameter name: 'TAG',
-                     type: 'PT_TAG',
-                     defaultValue: 'branchversion'
-        }
+      gitParameter tagFilter: 'origin/(.*)', defaultValue: 'branchversion', name: 'TAG', type: 'PT_TAG'
+    }
     
     stages {
         stage('pull git code') {
